@@ -1,0 +1,101 @@
+    1  apt install bzip2
+    2  sudo apt install bzip2
+    3  sudo apt install guestadittion
+    4  ssh-keygen
+    5  y
+    6  ssh-keygen
+    7  cat $HOME/.ssh/*.pub
+    8  cd
+    9  clear
+   10  mkdir repogit
+   11  cd
+   12  ls
+   13  ls -l
+   14  ls -h
+   15  ls -la
+   16  clear
+   17  cd repogit
+   18  cd ..
+   19  cd $home
+   20  cd home
+   21  ls
+   22  ssh -T git@github.com
+   23  git clone git@github.com:FarasSchmidt/TP_AySO.git
+   24  sudo apt install git
+   25  git clone git@github.com:FarasSchmidt/TP_AySO.git
+   26  cd TP_AySO/
+   27  pwd
+   28  ls -l
+   29  cat /etc/os-release
+   30  man grep
+   31  grep HOME_URL /etc/os-release
+   32  grep home_url /etc/os-release
+   33  man grep
+   34  grep home_url /etc/os-release -i
+   35  whoami
+   36  echo “Usuario=$(whoami)” > datos_usuario.txt
+   37  ls -l
+   38  git add .
+   39  git config --global user.email "faras.a.schmidt@gmail.com"
+   40  git config --global user.name "FarasSchmidt"
+   41  git config user.email
+   42  git config user.name
+   43  git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+   44  git status
+   45  git push
+   46  grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+   47  git add datos_usuario.txt
+   48  git commit -m "feat: Añadiendo información de CPU"
+   49  git push
+   50  cat <<EOF >> README.md
+   51  Alumno: Faras Schmidt
+   52  División: 315 Turno: Noche
+   53  EOF
+   54  cat README.md
+   55  git add README.md
+   56  git commit -m "ADD: Añadiendo Readme y datos de usuario"
+   57  git push
+   58  history -a
+   59  sudo fdisk -l
+   60  sudo pvcreate /dev/sdb /dev/sdc /dev/sdd
+   61  sudo apt update
+   62  sudo apt install lvm2 -y
+   63  which pvcreate
+   64  sudo pvcreate /dev/sdb /dev/sdc /dev/sdd
+   65  sudo pvs
+   66  sudo vgcreate nodocentral /dev/sdb /dev/sdc /dev/sdd
+   67  sudo vgs
+   68  sudo lvcreate -L 3G -n sitios nodocentral
+   69  sudo lvcreate -L 5G -n salvas nodocentral
+   70  sudo lvs
+   71  sudo lvextend -L 4G /dev/nodocentral/sitios
+   72  sudo mkfs.ext4 /dev/nodocentral/sitios
+   73  sudo mkfs.ext4 /dev/nodocentral/salvas
+   74  sudo mkdir -p /mnt/sitios /mnt/salvas
+   75  sudo mount /dev/nodocentral/sitios /mnt/sitios
+   76  sudo mount /dev/nodocentral/salvas /mnt/salvas
+   77  echo "Archivo de prueba" | sudo tee /mnt/sitios/prueba.txt
+   78  cat /mnt/sitios/prueba.txt
+   79  sudo umount /mnt/sitios
+   80  sudo umount /mnt/salvas
+   81  sudo lvremove /dev/nodocentral/sitios
+   82  sudo lvremove /dev/nodocentral/salvas
+   83  sudo vgremove nodocentral
+   84  sudo pvremove /dev/sdb /dev/sdc /dev/sdd
+   85  sudo fdisk /dev/sdd
+   86  sudo fdisk -l /dev/sdd
+   87  sudo mkfs.ext4 /dev/sdd1
+   88  sudo mkfs.ext4 /dev/sdd2
+   89  sudo mkfs.ext4 /dev/sdd3
+   90  sudo mkfs.ext4 /dev/sdd4
+   91  sudo mkfs.ext4 /dev/sdd5
+   92  sudo mkfs.ext4 /dev/sdd6
+   93  sudo mkdir -p /mnt/p{1,2,3,4,5,6}
+   94  sudo mount /dev/sdd1 /mnt/p1
+   95  sudo mount /dev/sdd2 /mnt/p2
+   96  sudo mount /dev/sdd3 /mnt/p3
+   97  sudo mount /dev/sdd4 /mnt/p4
+   98  sudo mount /dev/sdd5 /mnt/p5
+   99  sudo mount /dev/sdd6 /mnt/p6
+  100  df -h
+  101  history > history.txt
